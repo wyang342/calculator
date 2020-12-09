@@ -7,12 +7,12 @@ body {
 	grid-template-columns: 70px 70px 70px 70px;
 	grid-template-rows: 68px 68px 68px 68px 68px 68px;
 	justify-content: center;
-	padding-top: 50px;
 }
 
-.container div:active {
+.container .number:active {
 	background-color: grey;
 }
+
 
 #display {
 	grid-column: 1/5;
@@ -36,6 +36,10 @@ body {
 	align-items: center;
 }
 
+#clear:active {
+	background-color: rgb(73,73,73);
+}
+
 #zero {
 	grid-column: 1/4;
 	display: grid;
@@ -44,6 +48,10 @@ body {
 	border: 0.1px solid black;
 	justify-items: center;
 	align-items: center;
+}
+
+#zero:active {
+	background-color: grey;
 }
 
 .number {
@@ -62,4 +70,21 @@ body {
 	border: 0.1px solid black;
 	justify-items: center;
 	align-items: center;
+}
+
+.operator:active {
+	background-color: rgb(201, 131, 0);
+}
+
+#equals {
+	display: grid;
+	color: white;
+	background-color: orange;
+	border: 0.1px solid black;
+	justify-items: center;
+	align-items: center;
+}
+
+#equals:active {
+	background-color: rgb(201, 131, 0);
 }
