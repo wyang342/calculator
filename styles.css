@@ -1,0 +1,17 @@
+body {
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 20px 20px 20px 20px;
+	grid-template-rows: 18px 18px 18px 18px;
+	justify-content: center;
+}
+
+#clear {
+	grid-column: 1/4;
+}
+
+#zero {
+	grid-column: 1/4;
+}
