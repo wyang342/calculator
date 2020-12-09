@@ -29,9 +29,11 @@ function operate(operator, a, b) {
 
 function changeDisplayValue(value) {
 	const display = document.getElementById('display');
-	value = parseFloat(value);
-	if (value.getDecimalPlaces() > 8) {
-		display.textContent = value.toFixed(8);
+	value = value.toString();
+	if (value === 'Infinity') display.textContent = "ERROR";
+	else if (value.length > 8) {
+		value = value.slice(0, 10);
+		display.textContent = value;
 	}
 	else display.textContent = value;
 }
