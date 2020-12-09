@@ -20,9 +20,9 @@ function operate(operator, a, b) {
 			return add(a, b);
 		case "-":
 			return subtract(a, b);
-		case "*":
+		case "×":
 			return multiply(a, b);
-		case "/":
+		case "÷":
 			return divide(a, b);
 	}
 }
@@ -101,8 +101,8 @@ function listenForEquals() {
 		if (numA && numB) {
 			displayValue = operate(currentOperator, numA, numB);
 			changeDisplayValue(displayValue);
-			numA = null, numB = null, currentOperator = null;
-			switchToB = false;
+			numA = displayValue, numB = null, currentOperator = null;
+			switchToB = true;
 			start = true;
 		};
 	});
