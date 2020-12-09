@@ -4,22 +4,11 @@ body {
 
 .container {
 	display: grid;
-	grid-template-columns: 18vh 18vh 18vh 18vh;
-	grid-template-rows: 16vh 16vh 16vh 16vh 16vh 16vh;
 	justify-content: center;
-	font-size: 8vh;
 }
 
 .container .number:active {
 	background-color: grey;
-}
-
-@media (max-width: 475px) {
-	.container {
-		grid-template-columns: 10vh 10vh 10vh 10vh;
-		grid-template-rows: 16vh 16vh 16vh 16vh 16vh 16vh;	
-		font-size: 6vh;
-	}
 }
 
 #display {
@@ -95,4 +84,47 @@ body {
 
 #equals:active {
 	background-color: rgb(201, 131, 0);
+}
+
+@media (max-device-width: 415px) {
+	.container {
+		grid-template-columns: 10vh 10vh 10vh 10vh;
+		grid-template-rows: 16vh 16vh 16vh 16vh 16vh 16vh;	
+		font-size: 6vh;
+	}
+	footer {
+		font-size: 4vw;
+	}
+}
+
+@media (min-device-width: 415px) {
+	.container {
+		grid-template-columns: 18vh 18vh 18vh 18vh;
+		grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
+		font-size: 8vh;
+	}
+	footer {
+		font-size: 1.5vw;
+	}
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #000608;
+    padding: 2px;
+}
+
+#createdBy {
+    float: left;
+    margin-left: 5px;
+}
+
+a {
+    color: #cccccc;
+    font-family: Arial;
+    text-decoration: none;
+    text-align: right;
 }
