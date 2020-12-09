@@ -5,9 +5,25 @@ body {
 .container {
 	display: grid;
 	grid-template-columns: 70px 70px 70px 70px;
-	grid-template-rows: 68px 68px 68px 68px 68px;
+	grid-template-rows: 68px 68px 68px 68px 68px 68px;
 	justify-content: center;
 	padding-top: 50px;
+}
+
+.container div:active {
+	background-color: grey;
+}
+
+#display {
+	grid-column: 1/5;
+	display: grid;
+	color: white;
+	background-color: rgb(73, 73, 73);
+	border: 0.1px solid black;
+	justify-items: right;
+	align-items: center;
+	padding-right: 15px;
+	font-size: 45px;
 }
 
 #clear {
@@ -15,7 +31,7 @@ body {
 	display: grid;
 	color: white;
 	background-color: gray;
-	border: 1px solid black;
+	border: 0.1px solid black;
 	justify-items: center;
 	align-items: center;
 }
@@ -25,7 +41,7 @@ body {
 	display: grid;
 	color: white;
 	background-color: darkgray;
-	border: 1px solid black;
+	border: 0.1px solid black;
 	justify-items: center;
 	align-items: center;
 }
@@ -34,16 +50,16 @@ body {
 	display: grid;
 	color: white;
 	background-color: darkgray;
-	border: 1px solid black;
+	border: 0.1px solid black;
 	justify-items: center;
 	align-items: center;
 }
 
-.rightCol {
+.operator {
 	display: grid;
 	color: white;
 	background-color: orange;
-	border: 1px solid black;
+	border: 0.1px solid black;
 	justify-items: center;
 	align-items: center;
 }

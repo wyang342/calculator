@@ -26,3 +26,33 @@ function operate(operator, a, b) {
 			return divide(a, b);
 	}
 }
+
+
+function changeDisplayValue(value) {
+	const display = document.getElementById('display');
+	display.textContent = value;
+}
+
+function listenForNumberClick() {
+	let numbers = document.getElementsByClassName('number');
+	for (let i = 0; i < numbers.length; i++) {
+		numbers[i].addEventListener('click', () => {
+			displayValue = numbers[i].textContent;
+			changeDisplayValue(displayValue);
+		});
+	};
+};
+
+function listenForOperatorClick() {
+	let operators = document.getElementsByClassName('operator');
+	for (let i = 0; i < operators.length; i++) {
+		operators[i].addEventListener('click', () => {
+			console.log(operators[i].textContent);
+		});
+	};
+}
+
+listenForNumberClick();
+let displayValue = 0;
+changeDisplayValue(displayValue);
+
