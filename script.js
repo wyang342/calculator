@@ -1,17 +1,17 @@
 function add(a, b) {
-	return a + b;
+	return parseFloat(a) + parseFloat(b);
 }
 
 function subtract(a, b) {
-	return a - b;
+	return parseFloat(a) - parseFloat(b);
 }
 
 function multiply(a, b) {
-	return a * b;
+	return parseFloat(a) * parseFloat(b);
 }
 
 function divide(a, b) {
-	return a / b;
+	return parseFloat(a) / parseFloat(b);
 }
 
 function operate(operator, a, b) {
@@ -29,7 +29,16 @@ function operate(operator, a, b) {
 
 function changeDisplayValue(value) {
 	const display = document.getElementById('display');
-	display.textContent = value;
+	value = parseFloat(value);
+	if (value.getDecimalPlaces() > 8) {
+		display.textContent = value.toFixed(8);
+	}
+	else display.textContent = value;
+}
+
+Number.prototype.getDecimalPlaces = function () {
+	if (Math.floor(this.valueOf()) === this.valueOf()) return 0;
+	else return this.toString().split(".")[1].length || 0;
 }
 
 function getDisplayValue(currentSelection) {
@@ -37,7 +46,7 @@ function getDisplayValue(currentSelection) {
 		displayValue = currentSelection;
 		start = false;
 	} else {
-		displayValue = parseInt(displayValue.toString() + currentSelection.toString());
+		displayValue = parseFloat(displayValue.toString() + currentSelection.toString());
 	}
 	return displayValue;
 }
@@ -75,7 +84,9 @@ function listenForOperatorClick() {
 				displayValue = operate(previousOperator, numA, numB);
 				changeDisplayValue(displayValue);
 				numA = displayValue;
+				switchtoB = true;
 				numB = 0;
+				start = true;
 			};
 			previousOperator = operators[i].textContent;
 		});
@@ -107,7 +118,7 @@ function listenForClear() {
 
 // Initializing Calculator
 let displayValue = 0;
-let numA, numB;
+let numA = 0, numB = 0;
 let currentOperator, previousOperator;
 let switchToB = false;
 let start = true;
