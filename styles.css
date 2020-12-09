@@ -1,17 +1,49 @@
 body {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
 	display: grid;
-	grid-template-columns: 20px 20px 20px 20px;
-	grid-template-rows: 18px 18px 18px 18px;
+	grid-template-columns: 70px 70px 70px 70px;
+	grid-template-rows: 68px 68px 68px 68px 68px;
 	justify-content: center;
+	padding-top: 50px;
 }
 
 #clear {
 	grid-column: 1/4;
+	display: grid;
+	color: white;
+	background-color: gray;
+	border: 1px solid black;
+	justify-items: center;
+	align-items: center;
 }
 
 #zero {
 	grid-column: 1/4;
+	display: grid;
+	color: white;
+	background-color: darkgray;
+	border: 1px solid black;
+	justify-items: center;
+	align-items: center;
+}
+
+.number {
+	display: grid;
+	color: white;
+	background-color: darkgray;
+	border: 1px solid black;
+	justify-items: center;
+	align-items: center;
+}
+
+.rightCol {
+	display: grid;
+	color: white;
+	background-color: orange;
+	border: 1px solid black;
+	justify-items: center;
+	align-items: center;
 }
