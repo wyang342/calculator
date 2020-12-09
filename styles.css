@@ -20,7 +20,7 @@ body {
 	justify-items: right;
 	align-items: center;
 	padding-right: 15px;
-	font-size: 14vh;
+	font-size: 7vh;
 }
 
 #clear {
@@ -89,7 +89,7 @@ body {
 @media (max-device-width: 415px) {
 	.container {
 		grid-template-columns: 10vh 10vh 10vh 10vh;
-		grid-template-rows: 16vh 16vh 16vh 16vh 16vh 16vh;	
+		grid-template-rows: 14vh 14vh 14vh 14vh 14vh 14vh;	
 		font-size: 6vh;
 	}
 	footer {

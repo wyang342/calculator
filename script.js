@@ -31,7 +31,7 @@ function changeDisplayValue(value) {
 	const display = document.getElementById('display');
 	value = value.toString();
 	if (value === 'Infinity') display.textContent = "ERROR";
-	else if (value.length > 8) {
+	else if (value.length > 10) {
 		value = value.slice(0, 10);
 		display.textContent = value;
 	}
