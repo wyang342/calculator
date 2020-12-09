@@ -4,8 +4,8 @@ body {
 
 .container {
 	display: grid;
-	grid-template-columns: 70px 70px 70px 70px;
-	grid-template-rows: 68px 68px 68px 68px 68px 68px;
+	grid-template-columns: 18vh 18vh 18vh 18vh;
+	grid-template-rows: 16vh 16vh 16vh 16vh 16vh 16vh;
 	justify-content: center;
 }
 

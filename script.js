@@ -101,8 +101,9 @@ function listenForEquals() {
 		if (numA && numB) {
 			displayValue = operate(currentOperator, numA, numB);
 			changeDisplayValue(displayValue);
-			numA = displayValue;
-			numB = 0;
+			numA = null, numB = null, currentOperator = null;
+			switchToB = false;
+			start = true;
 		};
 	});
 };
